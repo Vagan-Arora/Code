@@ -1,0 +1,168 @@
+```bash
+nmap -vv --reason -Pn -T4 -sV -p 31331 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_nmap.txt" -oX "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/xml/tcp_31331_http_nmap.xml" 10.10.90.24
+```
+
+[/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_nmap.txt](file:///home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_nmap.txt):
+
+```
+# Nmap 7.94 scan initiated Wed Jul  5 08:33:57 2023 as: nmap -vv --reason -Pn -T4 -sV -p 31331 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_nmap.txt" -oX "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/xml/tcp_31331_http_nmap.xml" 10.10.90.24
+Nmap scan report for 10.10.90.24
+Host is up, received user-set (0.16s latency).
+Scanned at 2023-07-05 08:33:58 IST for 38s
+
+Bug in http-security-headers: no string output.
+PORT      STATE SERVICE REASON         VERSION
+31331/tcp open  http    syn-ack ttl 60 Apache httpd 2.4.29 ((Ubuntu))
+| http-php-version: Logo query returned unknown hash 1fbcb4b1cf6163b917045b2d15c21d24
+|_Credits query returned unknown hash 1fbcb4b1cf6163b917045b2d15c21d24
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-internal-ip-disclosure: 
+|_  Internal IP Leaked: 10
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; html: 2
+|     /css/
+|       css: 1
+|     /images/
+|       svg: 5
+|     /js/
+|       js: 1
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /images/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; html: 2; js: 1; svg: 5
+|_http-favicon: Unknown favicon MD5: 15C1B7515662078EF4B5C724E2927A96
+|_http-malware-host: Host appears to be clean
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-title: UltraTech - The best of technology (AI, FinTech, Big Data)
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-feed: Couldn't find any feeds.
+|_http-chrono: Request times for /; avg: 500.69ms; min: 410.63ms; max: 679.75ms
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-date: Wed, 05 Jul 2023 03:04:12 GMT; 0s from local time.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+| http-headers: 
+|   Date: Wed, 05 Jul 2023 03:04:12 GMT
+|   Server: Apache/2.4.29 (Ubuntu)
+|   Last-Modified: Fri, 22 Mar 2019 18:06:50 GMT
+|   ETag: "17cc-584b2b811ebb3"
+|   Accept-Ranges: bytes
+|   Content-Length: 6092
+|   Vary: Accept-Encoding
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+| http-grep: 
+|   (1) http://10.10.90.24:31331/: 
+|     (1) email: 
+|_      + ultratech@yopmail.com
+|_http-errors: Couldn't find any error pages.
+|_http-mobileversion-checker: No mobile version detected.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.90.24
+|     
+|     Path: http://10.10.90.24:31331/index.html
+|     Line number: 10
+|     Comment: 
+|         <!-- Hero(extended) navbar -->
+|     
+|     Path: http://10.10.90.24:31331/css/style.min.css
+|     Line number: 2
+|     Comment: 
+|         /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+|     
+|     Path: http://10.10.90.24:31331/index.html
+|     Line number: 116
+|     Comment: 
+|         <!-- Footer -->
+|     
+|     Path: http://10.10.90.24:31331/what.html
+|     Line number: 26
+|     Comment: 
+|         <!-- Hero unit -->
+|     
+|     Path: http://10.10.90.24:31331/index.html
+|     Line number: 79
+|     Comment: 
+|         <!-- Expanded sections -->
+|     
+|     Path: http://10.10.90.24:31331/index.html
+|     Line number: 106
+|     Comment: 
+|         <!-- Call To Action -->
+|     
+|     Path: http://10.10.90.24:31331/what.html
+|     Line number: 50
+|     Comment: 
+|         <!--<li>Partners</li>-->
+|     
+|     Path: http://10.10.90.24:31331/what.html
+|     Line number: 41
+|     Comment: 
+|         <!-- Page content -->
+|     
+|     Path: http://10.10.90.24:31331/index.html
+|     Line number: 47
+|     Comment: 
+|         <!-- Steps -->
+|     
+|     Path: http://10.10.90.24:31331/index.html
+|     Line number: 139
+|     Comment: 
+|         <!-- Hey, what are you looking at?! -->
+|     
+|     Path: http://10.10.90.24:31331/what.html
+|     Line number: 10
+|     Comment: 
+|         <!-- navbar -->
+|     
+|     Path: http://10.10.90.24:31331/css/style.min.css
+|     Line number: 4
+|     Comment: 
+|_        /*! responsive-nav.js 1.0.39 by @viljamis */
+| http-enum: 
+|   /robots.txt: Robots file
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+|   /images/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+|_  /js/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul  5 08:34:36 2023 -- 1 IP address (1 host up) scanned in 38.74 seconds
+
+```

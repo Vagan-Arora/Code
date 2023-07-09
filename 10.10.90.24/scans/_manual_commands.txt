@@ -1,0 +1,40 @@
+[*] http on tcp/8081
+
+	[-] (feroxbuster) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		feroxbuster -u http://10.10.90.24:8081 -t 10 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -e -r -o /home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_feroxbuster_dirbuster.txt
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 8081 -o "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_auth_hydra.txt" http-get://10.10.90.24/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 8081 -O "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_auth_medusa.txt" -M http -h 10.10.90.24 -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 8081 -o "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_form_hydra.txt" http-post-form://10.10.90.24/path/to/login.php:"username=^USER^&password=^PASS^":"invalid-login-message"
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 8081 -O "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_form_medusa.txt" -M web-form -h 10.10.90.24 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://10.10.90.24:8081/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_wpscan.txt"
+
+[*] http on tcp/31331
+
+	[-] (feroxbuster) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		feroxbuster -u http://10.10.90.24:31331 -t 10 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -e -r -o /home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_feroxbuster_dirbuster.txt
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 31331 -o "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_auth_hydra.txt" http-get://10.10.90.24/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 31331 -O "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_auth_medusa.txt" -M http -h 10.10.90.24 -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 31331 -o "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_form_hydra.txt" http-post-form://10.10.90.24/path/to/login.php:"username=^USER^&password=^PASS^":"invalid-login-message"
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 31331 -O "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_form_medusa.txt" -M web-form -h 10.10.90.24 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://10.10.90.24:31331/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_wpscan.txt"
+

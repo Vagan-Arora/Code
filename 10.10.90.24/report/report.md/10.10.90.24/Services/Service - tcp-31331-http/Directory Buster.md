@@ -1,0 +1,83 @@
+```bash
+feroxbuster -u http://10.10.90.24:31331/ -t 10 -w /root/.local/share/AutoRecon/wordlists/dirbuster.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -e -r -o "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_feroxbuster_dirbuster.txt"
+```
+
+[/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_feroxbuster_dirbuster.txt](file:///home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp31331/tcp_31331_http_feroxbuster_dirbuster.txt):
+
+```
+200      GET      139l      531w     6092c http://10.10.90.24:31331/index.html
+200      GET        1l      396w     8929c http://10.10.90.24:31331/images/undraw_responsive.svg
+200      GET        1l      178w    19165c http://10.10.90.24:31331/js/app.min.js
+200      GET       65l      229w     2534c http://10.10.90.24:31331/what.html
+200      GET        1l      661w    19350c http://10.10.90.24:31331/images/undraw_frameworks.svg
+200      GET        1l      443w    11824c http://10.10.90.24:31331/images/undraw_creation.svg
+200      GET        1l      203w     8500c http://10.10.90.24:31331/images/undraw_designer.svg
+200      GET        1l      530w    10496c http://10.10.90.24:31331/images/undraw_browser.svg
+200      GET        4l      328w    24710c http://10.10.90.24:31331/css/style.min.css
+200      GET      139l      531w     6092c http://10.10.90.24:31331/
+404      GET        9l       34w      305c http://10.10.90.24:31331/Documents%20and%20Settings.html
+404      GET        9l       34w      304c http://10.10.90.24:31331/Documents%20and%20Settings.php
+404      GET        9l       34w      305c http://10.10.90.24:31331/Documents%20and%20Settings.aspx
+404      GET        9l       33w      291c http://10.10.90.24:31331/Program%20Files
+404      GET        9l       33w      295c http://10.10.90.24:31331/Program%20Files.txt
+404      GET        9l       33w      296c http://10.10.90.24:31331/Program%20Files.html
+404      GET        9l       33w      295c http://10.10.90.24:31331/Program%20Files.php
+404      GET        9l       33w      295c http://10.10.90.24:31331/Program%20Files.asp
+404      GET        9l       33w      296c http://10.10.90.24:31331/Program%20Files.aspx
+404      GET        9l       33w      295c http://10.10.90.24:31331/Program%20Files.jsp
+200      GET     1393l     3543w    30017c http://10.10.90.24:31331/css/style.css
+200      GET       17l       69w     1137c http://10.10.90.24:31331/css/
+200      GET        7l       25w    32412c http://10.10.90.24:31331/favicon.ico
+200      GET        1l      327w    11819c http://10.10.90.24:31331/images/undraw_hello_aeia.svg
+200      GET        1l      155w    12953c http://10.10.90.24:31331/images/tet.svg
+200      GET        1l      931w    18240c http://10.10.90.24:31331/images/undraw_everywhere.svg
+200      GET        1l      671w    15018c http://10.10.90.24:31331/images/undraw_design.svg
+200      GET        1l      307w     9407c http://10.10.90.24:31331/images/undraw_selfie.svg
+200      GET        1l      677w    14561c http://10.10.90.24:31331/images/undraw_tabs.svg
+200      GET      206l      773w    77520c http://10.10.90.24:31331/images/evie_default_bg.jpeg
+200      GET        1l      685w    14849c http://10.10.90.24:31331/images/undraw_elements.svg
+200      GET        1l      265w     4599c http://10.10.90.24:31331/images/together.svg
+200      GET        1l     2326w    63504c http://10.10.90.24:31331/images/undraw_fans.svg
+200      GET      240l     1315w   107517c http://10.10.90.24:31331/images/hero_sm.png
+200      GET       31l      205w     4169c http://10.10.90.24:31331/images/
+200      GET       37l       86w      883c http://10.10.90.24:31331/js/api.js
+200      GET     1463l     4649w    44494c http://10.10.90.24:31331/js/app.js
+200      GET       18l       82w     1322c http://10.10.90.24:31331/js/
+200      GET       46l      157w     1986c http://10.10.90.24:31331/partners.html
+404      GET        9l       33w      294c http://10.10.90.24:31331/reports%20list.asp
+200      GET        5l        6w       53c http://10.10.90.24:31331/robots.txt
+404      GET        9l       33w      288c http://10.10.90.24:31331/contact%20us
+404      GET        9l       33w      293c http://10.10.90.24:31331/contact%20us.html
+404      GET        9l       33w      293c http://10.10.90.24:31331/donate%20cash.txt
+404      GET        9l       33w      293c http://10.10.90.24:31331/donate%20cash.asp
+404      GET        9l       33w      292c http://10.10.90.24:31331/external%20files
+404      GET        9l       33w      296c http://10.10.90.24:31331/external%20files.txt
+404      GET        9l       33w      297c http://10.10.90.24:31331/external%20files.html
+404      GET        9l       33w      297c http://10.10.90.24:31331/external%20files.aspx
+404      GET        9l       33w      287c http://10.10.90.24:31331/home%20page
+404      GET        9l       33w      291c http://10.10.90.24:31331/home%20page.txt
+404      GET        9l       33w      292c http://10.10.90.24:31331/home%20page.html
+404      GET        9l       33w      291c http://10.10.90.24:31331/home%20page.php
+404      GET        9l       33w      291c http://10.10.90.24:31331/home%20page.asp
+404      GET        9l       33w      292c http://10.10.90.24:31331/home%20page.aspx
+404      GET        9l       33w      291c http://10.10.90.24:31331/home%20page.jsp
+404      GET        9l       33w      293c http://10.10.90.24:31331/modern%20mom.html
+404      GET        9l       33w      292c http://10.10.90.24:31331/modern%20mom.php
+404      GET        9l       33w      292c http://10.10.90.24:31331/modern%20mom.jsp
+404      GET        9l       34w      298c http://10.10.90.24:31331/neuf%20giga%20photo.aspx
+404      GET        9l       34w      297c http://10.10.90.24:31331/neuf%20giga%20photo.jsp
+404      GET        9l       33w      297c http://10.10.90.24:31331/planned%20giving.aspx
+404      GET        9l       33w      296c http://10.10.90.24:31331/press%20releases.txt
+404      GET        9l       33w      297c http://10.10.90.24:31331/press%20releases.html
+404      GET        9l       33w      296c http://10.10.90.24:31331/press%20releases.asp
+404      GET        9l       33w      297c http://10.10.90.24:31331/press%20releases.aspx
+404      GET        9l       33w      296c http://10.10.90.24:31331/privacy%20policy.asp
+404      GET        9l       33w      290c http://10.10.90.24:31331/site%20map.txt
+404      GET        9l       33w      290c http://10.10.90.24:31331/site%20map.asp
+404      GET        9l       33w      295c http://10.10.90.24:31331/style%20library.txt
+404      GET        9l       33w      296c http://10.10.90.24:31331/style%20library.aspx
+404      GET        9l       33w      297c http://10.10.90.24:31331/web%20references.html
+404      GET        9l       33w      296c http://10.10.90.24:31331/web%20references.php
+404      GET        9l       33w      297c http://10.10.90.24:31331/web%20references.aspx
+
+```

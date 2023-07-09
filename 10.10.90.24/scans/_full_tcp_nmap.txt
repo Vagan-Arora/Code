@@ -1,0 +1,47 @@
+# Nmap 7.94 scan initiated Wed Jul  5 08:20:53 2023 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/_full_tcp_nmap.txt" -oX "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/xml/_full_tcp_nmap.xml" 10.10.90.24
+Increasing send delay for 10.10.90.24 from 0 to 5 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.10.90.24 from 5 to 10 due to 30 out of 74 dropped probes since last increase.
+Nmap scan report for 10.10.90.24
+Host is up, received user-set (0.16s latency).
+Scanned at 2023-07-05 08:20:53 IST for 784s
+Not shown: 65533 closed tcp ports (reset)
+PORT      STATE SERVICE REASON         VERSION
+8081/tcp  open  http    syn-ack ttl 60 Node.js Express framework
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-cors: HEAD POST PUT DELETE PATCH
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+31331/tcp open  http    syn-ack ttl 60 Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: UltraTech - The best of technology (AI, FinTech, Big Data)
+|_http-favicon: Unknown favicon MD5: 15C1B7515662078EF4B5C724E2927A96
+Aggressive OS guesses: Linux 5.4 (97%), Linux 3.10 - 3.13 (96%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.16 (95%), Linux 3.1 (93%), Linux 3.2 (93%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (93%), Linux 3.10 (93%), Linux 3.12 (93%), Linux 3.19 (93%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94%E=4%D=7/5%OT=8081%CT=1%CU=33709%PV=Y%DS=5%DC=T%G=Y%TM=64A4DD
+OS:9D%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10D%TI=Z%CI=I%II=I%TS=A)OP
+OS:S(O1=M508ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M508ST11NW6%O5=M508ST
+OS:11NW6%O6=M508ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)EC
+OS:N(R=Y%DF=Y%T=40%W=6903%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=
+OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%
+OS:F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N
+OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%C
+OS:D=S)
+
+Uptime guess: 40.928 days (since Thu May 25 10:17:40 2023)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 42468/tcp)
+HOP RTT       ADDRESS
+1   35.79 ms  10.17.0.1
+2   ... 4
+5   159.37 ms 10.10.90.24
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul  5 08:33:57 2023 -- 1 IP address (1 host up) scanned in 784.23 seconds

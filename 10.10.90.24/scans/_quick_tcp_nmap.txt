@@ -1,0 +1,29 @@
+# Nmap 7.94 scan initiated Wed Jul  5 08:20:53 2023 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/_quick_tcp_nmap.txt" -oX "/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/xml/_quick_tcp_nmap.xml" 10.10.90.24
+Increasing send delay for 10.10.90.24 from 0 to 5 due to 96 out of 239 dropped probes since last increase.
+Increasing send delay for 10.10.90.24 from 5 to 10 due to 221 out of 552 dropped probes since last increase.
+Nmap scan report for 10.10.90.24
+Host is up, received user-set (0.21s latency).
+Scanned at 2023-07-05 08:20:53 IST for 35s
+All 1000 scanned ports on 10.10.90.24 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.94%E=4%D=7/5%OT=%CT=1%CU=41954%PV=Y%DS=5%DC=T%G=N%TM=64A4DAB0%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 5 hops
+
+TRACEROUTE (using port 10003/tcp)
+HOP RTT       ADDRESS
+1   34.05 ms  10.17.0.1
+2   ... 4
+5   223.41 ms 10.10.90.24
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul  5 08:21:28 2023 -- 1 IP address (1 host up) scanned in 35.65 seconds

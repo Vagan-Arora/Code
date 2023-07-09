@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Wed Jul  5 08:33:57 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 8081 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_nmap.txt&quot; -oX &quot;/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/xml/tcp_8081_http_nmap.xml&quot; 10.10.90.24 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 8081 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/tcp_8081_http_nmap.txt&quot; -oX &quot;/home/vagan/Music/CTF/THM/10.10.32.11  UltraTech/results/10.10.90.24/scans/tcp8081/xml/tcp_8081_http_nmap.xml&quot; 10.10.90.24" start="1688526237" startstr="Wed Jul  5 08:33:57 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8081"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1688526238"/>
+<taskend task="NSE" time="1688526238"/>
+<taskbegin task="NSE" time="1688526238"/>
+<taskend task="NSE" time="1688526238"/>
+<taskbegin task="NSE" time="1688526238"/>
+<taskend task="NSE" time="1688526238"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1688526238"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1688526238"/>
+<taskbegin task="SYN Stealth Scan" time="1688526238"/>
+<taskend task="SYN Stealth Scan" time="1688526238" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1688526238"/>
+<taskend task="Service scan" time="1688526245" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1688526245"/>
+<taskend task="NSE" time="1688526267"/>
+<taskbegin task="NSE" time="1688526267"/>
+<taskend task="NSE" time="1688526268"/>
+<taskbegin task="NSE" time="1688526268"/>
+<taskend task="NSE" time="1688526268"/>
+<host starttime="1688526238" endtime="1688526268"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.90.24" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8081"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="http" product="Node.js Express framework" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-date" output="Wed, 05 Jul 2023 03:04:11 GMT; 0s from local time."><elem key="date">2023-07-05T03:04:11+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-headers" output="&#xa;  X-Powered-By: Express&#xa;  Access-Control-Allow-Origin: *&#xa;  Content-Type: text/html; charset=utf-8&#xa;  Content-Length: 20&#xa;  ETag: W/&quot;14-tVlBr0s73mf41Pi7C/1PMqiyXRc&quot;&#xa;  Date: Wed, 05 Jul 2023 03:04:10 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."></script><script id="http-security-headers" output=""></script><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-chrono" output="Request times for /; avg: 379.54ms; min: 343.31ms; max: 421.71ms"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-php-version" output="Logo query returned unknown hash 7a0764cca649f98ed5fedb60db4db182&#xa;Credits query returned unknown hash 7a0764cca649f98ed5fedb60db4db182"/><script id="http-cors" output="HEAD GET POST PUT DELETE PATCH"/><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-devframework" output="Express detected. Found Express in X-Powered-By Header"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="158915" rttvar="158915" to="794575"/>
+</host>
+<taskbegin task="NSE" time="1688526268"/>
+<taskend task="NSE" time="1688526268"/>
+<taskbegin task="NSE" time="1688526268"/>
+<taskend task="NSE" time="1688526268"/>
+<taskbegin task="NSE" time="1688526268"/>
+<taskend task="NSE" time="1688526268"/>
+<runstats><finished time="1688526268" timestr="Wed Jul  5 08:34:28 2023" summary="Nmap done at Wed Jul  5 08:34:28 2023; 1 IP address (1 host up) scanned in 30.80 seconds" elapsed="30.80" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
